@@ -12,8 +12,8 @@ int main(void)
 int n;
 int lastDigit;
 srand(time(NULL)); /* Initialize random seed */
-n = rand(); /* Generate a random number */
-lastDigit = abs(n) % 10; /* Extract the last digit of n */
+n = rand() % 100; /* Generate a random number between 0 and 99 */
+lastDigit = n % 10; /* Extract the last digit of n */
 printf("Last digit of %d is %d and is ", n, lastDigit);
 if (lastDigit > 5)
 {
