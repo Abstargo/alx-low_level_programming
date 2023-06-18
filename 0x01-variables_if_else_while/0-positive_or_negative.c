@@ -1,34 +1,14 @@
-#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+/* more headers goes there */
 
-/**
- * main - Entry point of the program
- *
- * Return: 0 (Success)
- */
+/* betty style doc for function main goes there */
 int main(void)
 {
-	srand(time(NULL)); /* Initialize random seed */
+	int n;
 
-	int n = rand() % RAND_MAX; /* Generate a random number */
-
-	printf("The number %d is ", n);
-
-	if (n > 0)
-	{
-		printf("positive");
-	}
-	else if (n == 0)
-	{
-		printf("zero");
-	}
-	else
-	{
-		printf("negative");
-	}
-
-	printf("\n");
-
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
+	/* your code goes there */
 	return (0);
 }
