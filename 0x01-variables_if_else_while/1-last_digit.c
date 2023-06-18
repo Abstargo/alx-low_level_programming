@@ -10,11 +10,12 @@
 int main(void)
 {
     int n;
+    int lastDigit;
 
     srand(time(NULL)); /* Initialize random seed */
     n = rand(); /* Generate a random number */
 
-    int lastDigit = n % 10; /* Extract the last digit of n */
+    lastDigit = n % 10; /* Extract the last digit of n */
 
     printf("Last digit of %d is ", n);
 
@@ -35,4 +36,3 @@ int main(void)
 
     return (0);
 }
-
