@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
-#include <string.h>
 
 /**
  * main - Entry point of the program
@@ -12,7 +11,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int sum = 0;
+	int add = 0;
 
 	if (argc == 1)
 	{
@@ -33,10 +32,10 @@ int main(int argc, char *argv[])
 			}
 		}
 
-		sum += atoi(arg);
+		add += atoi(arg);
 	}
 
-	printf("%d\n", sum);
+	printf("%d\n", add);
 
 	return (0);
 }
