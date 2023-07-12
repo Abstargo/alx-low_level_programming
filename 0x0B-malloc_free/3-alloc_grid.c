@@ -2,7 +2,7 @@
 
 /**
  * alloc_grid - allocates memory for a 2D array of integers
- * @width: The width of the end
+ * @width: The width of the grid
  * @heigth: The height of the grid
  *
  * Return: Pointer to the allocated 2D array, or NULL if it fails
