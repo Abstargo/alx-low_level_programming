@@ -8,8 +8,8 @@
  * @new_size: Size of the new memory block in bytes
  *
  * Return: Pointer to the reallocated memory block
- * If new_size is zero and ptr is not NULL, it returns NULL and frees the memory block
- * If malloc fails to allocate memory, it returns NULL and frees the memory block
+ * If new_size is zero and ptr is not NULL, it returns NULL
+ * If malloc fails to allocate memory, it returns NULL
  * If new_size is equal to old_size, it returns ptr without reallocation
  * If ptr is NULL, it is equivalent to malloc(new_size)
  */
@@ -25,6 +25,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		new_ptr = malloc(new_size);
 		if (new_ptr == NULL)
 			return (NULL);
+
 		return (new_ptr);
 	}
 
