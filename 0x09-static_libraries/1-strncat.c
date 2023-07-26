@@ -1,4 +1,5 @@
-#include "stdio.h"
+#include "main.h"
+#include <stdio.h>
 
 /**
  * _strncat - Concatenates two strings, using at most n bytes from src.
@@ -8,7 +9,7 @@
  *
  * Return: dest.
  */
-char *_strncat(char *dest, const char *src, int n)
+char *_strncat(char *dest, char *src, int n)
 {
 	char *tbs = dest;
 

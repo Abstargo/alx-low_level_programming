@@ -1,4 +1,5 @@
-#include "stdio.h"
+#include "main.h"
+#include <stdio.h>
 
 /**
  * _strncpy - Copies a string from src to dest, up to n characters.
@@ -8,7 +9,7 @@
  *
  * Return: dest.
  */
-char *_strncpy(char *dest, const char *src, int n)
+char *_strncpy(char *dest, char *src, int n)
 {
 	int i;
 
