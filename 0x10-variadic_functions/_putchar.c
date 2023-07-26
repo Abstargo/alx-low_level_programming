@@ -1,5 +1,4 @@
 #include <unistd.h>
-#include "variadic_functions.h"
 
 /**
  * _putchar - Writes a character to the standard output (stdout)
