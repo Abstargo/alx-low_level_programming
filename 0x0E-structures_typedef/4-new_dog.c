@@ -4,15 +4,14 @@
 #include "dog.h"
 
 /**
- * new_doggie - Creates a new dog
+ * new_dog - Creates a new dog
  * @name: Pointer to the name of the dog
- * @age: Age of the  dog
+ * @age: Age of the dog
  * @owner: owner's name
  *
- * Return: Pointer to  the newly created dog (dog_t)
+ * Return: Pointer to the newly created dog (dog_t)
  * or NULL if memory allocation fails
  */
-
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *new_dog;
@@ -21,14 +20,14 @@ dog_t *new_dog(char *name, float age, char *owner)
 	new_dog = malloc(sizeof(dog_t));
 	if  (new_dog == NULL)
 	{
-		return(NULL);
+		return (NULL);
 	}
 
 	name_copy = strdup(name);
 	if (name_copy == NULL)
 	{
 		free(new_dog);
-		return(NULL);
+		return (NULL);
 	}
 
 	owner_copy = strdup(owner);
@@ -36,12 +35,12 @@ dog_t *new_dog(char *name, float age, char *owner)
 	{
 		free(name_copy);
 		free(new_dog);
-		return(NULL);
+		return (NULL);
 	}
 
 	new_dog->name = name_copy;
 	new_dog->age = age;
 	new_dog->owner = owner_copy;
 
-	return(new_dog);
+	return (new_dog);
 }
