@@ -12,33 +12,21 @@
  * if write fails or does not write the
  * expected amount of bytes, return 0
  */
-
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int file_descriptor;
-	ssize_t read_count, write_count, total_letters = 0;
-	char buffer[1024];
+	char *buffer;
+	ssize_t fn;
+	ssize_t s;
+	ssize_t t;
 
-	if (filename == NULL)
+	fn = open(filename, O_RDONLY);
+	if (fn == -1)
 		return (0);
+	buffer = malloc(sizeof(char) * letters);
+	t = read(fn, buffer, letters);
+	s = write(STDOUT_FILENO, buffer, t);
 
-	file_descriptor = open(filename, O_RDONLY);
-	if (file_descriptor == -1)
-		return (0);
-
-	while ((read_count = read(file_descriptor, buffer, sizeof(buffer))) > 0)
-	{
-		write_count = write(STDOUT_FILENO, buffer, read_count);
-		if (write_count != read_count)
-		{
-			close(file_descriptor);
-			return (0);
-		}
-		total_letters += write_count;
-		if ((size_t)total_letters >= letters)
-			break;
-	}
-
-	close(file_descriptor);
-	return (total_letters);
+	free(buffer);
+	close(fn);
+	return (s);
 }
