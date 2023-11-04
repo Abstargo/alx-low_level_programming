@@ -2,6 +2,7 @@
 #define _HASH_TABLES_H_
 
 #include <string.h>
+#include <stdlib.h>
 #include <stdio.h>
 
 /**
